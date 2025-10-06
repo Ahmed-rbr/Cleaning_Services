@@ -11,6 +11,17 @@
   --color-bgPrimaryDark: #1f2a2e;
   --color-bgSecondaryDark: #c1c5c6;
   --font-inter: "Inter", sans-serif;
+  --animate-scroll: scroll 6s linear infinite;
+  --animate-scrollLg: scroll 24s linear infinite;
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
 }
 
 @layer components {

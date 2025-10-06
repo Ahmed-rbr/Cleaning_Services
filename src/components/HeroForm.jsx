@@ -24,7 +24,7 @@ const HeroForm = () => {
         type={"email"}
       />
       <label className="font-medium">Service options *</label>
-      <div className="grid gap-x-8 gap-y-4 grid-cols-2">
+      <div className="grid gap-x-8 gap-y-4 grid-cols-1 md:grid-cols-2">
         <label className="flex items-center gap-2 cursor-pointer">
           <Input className="checkbox" type={"checkbox"} />
           <span className="text-sm text-gray-700">Regular Cleaning</span>
