@@ -1,4 +1,5 @@
-import { FiSun, FiMoon } from "react-icons/fi";
+import { FiSun, FiMoon, FiMenu, FiX } from "react-icons/fi";
+
 import LinkIteme from "./LinkIteme";
 import Btn from "./Btn";
 import { useNavigate } from "react-router-dom";
@@ -6,6 +7,7 @@ import { useEffect, useState } from "react";
 
 const Navbar = () => {
   const [isDark, setIsDark] = useState(false);
+  const [isOpen, setOpen] = useState(false);
   useEffect(() => {
     const theme = localStorage.getItem("theme");
     if (theme === "dark") {
@@ -28,7 +30,7 @@ const Navbar = () => {
 
   const navigate = useNavigate();
   return (
-    <nav className="min-w-screen m-auto fixed shadow-2xl gap-6 z-50 bg-bgPrimary text-primary dark:bg-bgPrimaryDark dark:text-primaryDark      top-0">
+    <nav className="min-w-screen  m-auto fixed shadow-2xl gap-6 z-50 bg-bgPrimary text-primary dark:bg-bgPrimaryDark dark:text-primaryDark      top-0">
       <div className=" flex items-center justify-between  m-auto w-11/12 ">
         <div className="flex items-center gap-6 ">
           <div>
@@ -48,25 +50,68 @@ const Navbar = () => {
             <LinkIteme text={"Contact Us"} to={"contact"} />
           </div>
         </div>
-        <div className="hidden lg:flex gap-3">
-          <Btn text={"Book a Service"} classes={"btnBook"} />
-          <Btn
-            navigate={() => navigate("/")}
-            classes={"btnSign"}
-            text={"Sign up/Sign in"}
+
+        {}
+        <div className="flex gap-4">
+          <div className="hidden lg:flex gap-3">
+            <Btn text={"Book a Service"} classes={"btnBook"} />
+            <Btn
+              navigate={() => navigate("/")}
+              classes={"btnSign"}
+              text={"Sign up/Sign in"}
+            />
+          </div>
+          <button
+            onClick={() => setIsDark(!isDark)}
+            className="p-2 rounded bg-gray-200 dark:bg-gray-700"
+          >
+            {isDark ? (
+              <FiSun className="text-yellow-400 w-5 h-5" />
+            ) : (
+              <FiMoon className="text-gray-800 dark:text-gray-200 w-5 h-5" />
+            )}
+          </button>{" "}
+          <FiMenu
+            onClick={() => setOpen(true)}
+            className={`${!isOpen ? "flex" : "hidden"}  w-8 h-8 lg:hidden `}
           />
         </div>
-        {}
-        <button
-          onClick={() => setIsDark(!isDark)}
-          className="p-2 rounded bg-gray-200 dark:bg-gray-700"
-        >
-          {isDark ? (
-            <FiSun className="text-yellow-400 w-6 h-6" />
-          ) : (
-            <FiMoon className="text-gray-800 dark:text-gray-200 w-6 h-6" />
-          )}
-        </button>{" "}
+      </div>
+      <div
+        className={`${
+          isOpen ? "flex" : "hidden"
+        } flex-col fixed     transform transition-transform duration-500 ease-in-out
+ z-50 h-screen w-4/5 sm:3/5 shadow-lg md:w-2/5  right-0 top-0 items-center   p-8 dark:bg-primary dark:text-primaryDark bg-bgPrimary text-primary`}
+      >
+        <div className="flex mb-8 w-4/5 justify-between">
+          <span className="txt ">Menu</span>
+          <FiX onClick={() => setOpen(false)} className="w-8 h-8" />
+        </div>
+        <div className="flex flex-col gap-4">
+          <LinkIteme onClick={() => setOpen(false)} text={"Home"} to={"/"} />
+
+          <LinkIteme
+            onClick={() => setOpen(false)}
+            text={"About us"}
+            to={"about"}
+          />
+          <LinkIteme
+            onClick={() => setOpen(false)}
+            text={"Service"}
+            to={"service"}
+          />
+
+          <LinkIteme
+            onClick={() => setOpen(false)}
+            text={"Contact Us"}
+            to={"contact"}
+          />
+        </div>
+        <Btn
+          navigate={() => navigate("/")}
+          classes={"btnSign"}
+          text={"Sign up/Sign in"}
+        />
       </div>
     </nav>
   );

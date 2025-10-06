@@ -45,6 +45,10 @@
     @apply appearance-none w-6 h-6 border-2 border-gray-400 rounded-sm bg-white
       checked:bg-bgAccent checked:before:text-primary checked:before:content-['✓']   checked:border-transparent checked:text-white;
   }
+
+  .txt {
+    @apply dark:text-primaryDark  text-primary;
+  }
 }
 /* 
 @layer base {
