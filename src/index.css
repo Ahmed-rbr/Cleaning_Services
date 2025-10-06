@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quicksand:wght@300..700&display=swap");
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary: #1f2a2e;
+  --color-bgPrimary: #ffffff;
+  --color-bgAccent: #c1ff72;
+  --color-bgSecondary: #f4f3ee;
+  --color-primaryDark: #ffffff;
+  --color-bgPrimaryDark: #1f2a2e;
+  --color-bgSecondaryDark: #c1c5c6;
+  --font-inter: "Inter", sans-serif;
+}
+
+@layer components {
+  .card {
+    @apply bg-blue-300 text-2xl text-red-400 p-4;
+  }
+  .link {
+    @apply text-primary font-medium hover:bg-bgAccent dark:text-primaryDark  px-3 py-2 rounded-2xl hover:cursor-pointer transition-all duration-100;
+  }
+  .btnBook {
+    @apply text-primaryDark font-medium bg-primary dark:bg-bgSecondaryDark  px-3 py-2 rounded hover:text-bgAccent hover:cursor-pointer duration-75 shadow;
+  }
+  .btnSign {
+    @apply text-primary font-medium  bg-bgAccent   px-3 py-2 rounded hover:bg-[#A8FF39] hover:cursor-pointer duration-75 shadow;
+  }
+  .inputHero {
+    @apply w-11/12 py-3  px-4 accent-bgAccent rounded focus:outline-0 border border-primary/10 focus:border-bgAccent shadow placeholder-gray-400;
+  }
+
+  .checkbox {
+    @apply appearance-none w-6 h-6 border-2 border-gray-400 rounded-sm bg-white
+      checked:bg-bgAccent checked:before:text-primary checked:before:content-['✓']   checked:border-transparent checked:text-white;
+  }
+}
+/* 
+@layer base {
+  he {
+    @apply bg-red-300 text-2xl text-black p-4;
+  }
+}
+
+@utility fl {
+  @apply flex justify-center  items-center;
+} */

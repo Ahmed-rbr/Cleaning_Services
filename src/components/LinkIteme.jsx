@@ -1,0 +1,15 @@
+import React from "react";
+import { NavLink } from "react-router-dom";
+
+const LinkIteme = ({ text, to }) => {
+  return (
+    <NavLink
+      to={to}
+      className={({ isActive }) => (isActive ? `link bg-bgAccent` : `link`)}
+    >
+      {text}
+    </NavLink>
+  );
+};
+
+export default LinkIteme;
