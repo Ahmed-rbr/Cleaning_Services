@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 
 const RouterLoyout = () => {
   return (
-    <div className="m-auto  space-y-28 font-inter">
+    <div className="m-auto  space-y-24 font-inter">
       <Navbar />
       <div className=" pt-28">
         {" "}

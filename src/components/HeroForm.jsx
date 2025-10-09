@@ -4,7 +4,7 @@ import Input from "./Input";
 const HeroForm = () => {
   return (
     <form
-      className="flex   md:mt-12 shadow-lg items-center  bg-bgPrimary md:w-128 dark:bg-bgPrimaryDark  items-start rounded-2xl  gap-6 m-auto p-4  flex-col "
+      className="flex  w-full  md:mt-12 shadow-lg   bg-bgPrimary md:w-128 dark:bg-bgPrimaryDark  items-start rounded-2xl  gap-6 m-auto p-4  flex-col "
       action="#"
     >
       <h1 className="text-4xl font-medium text-primary dark:text-primaryDark">
