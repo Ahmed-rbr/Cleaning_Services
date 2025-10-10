@@ -3,6 +3,7 @@ import HeroForm from "../components/heroForm";
 import Services from "../components/Services";
 import Features from "../components/Features";
 import WhyUs from "../components/WhyUs";
+import Feedback from "../components/Feedback";
 
 const Home = () => {
   return (
@@ -68,8 +69,12 @@ const Home = () => {
       <section className="py-12 bg-primaryDark dark:bg-primary dark:text-primaryDark text-primary">
         <Features />
       </section>
-      <section className=" bg-primaryDark dark:bg-primary dark:text-primaryDark text-primary">
+      <section className="pb-12 bg-primaryDark dark:bg-primary dark:text-primaryDark text-primary">
         <WhyUs />
+      </section>
+
+      <section className="bg-primary  m-auto px-6 py-8">
+        <Feedback />
       </section>
     </article>
   );
