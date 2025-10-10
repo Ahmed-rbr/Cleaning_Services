@@ -1,15 +1,25 @@
 import React from "react";
 import Input from "./Input";
-
-const HeroForm = () => {
+import { FiX } from "react-icons/fi";
+const HeroForm = ({ show = false, close }) => {
   return (
     <form
       className="flex  w-full  md:mt-12 shadow-lg   bg-bgPrimary md:w-128 dark:bg-bgPrimaryDark  items-start rounded-2xl  gap-6 m-auto p-4  flex-col "
       action="#"
     >
-      <h1 className="text-4xl font-medium text-primary dark:text-primaryDark">
-        Get a free quote
-      </h1>
+      <div className="flex w-full justify-between items-center">
+        {" "}
+        <h1 className="text-4xl font-medium text-primary dark:text-primaryDark">
+          Get a free quote
+        </h1>
+        <FiX
+          onClick={close}
+          className={`${
+            show ? "" : "hidden"
+          } w-12 hover:cursor-pointer  text-red-600`}
+        />
+      </div>
+
       <Input
         className={"inputHero"}
         placeholder={"Full Name *"}

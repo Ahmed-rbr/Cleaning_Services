@@ -4,8 +4,10 @@ import LinkIteme from "./LinkIteme";
 import Btn from "./Btn";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import HeroForm from "./heroForm";
 
 const Navbar = () => {
+  const [isopenModel, setOpenModel] = useState(true);
   const [isDark, setIsDark] = useState(false);
   const [isOpen, setOpen] = useState(false);
   useEffect(() => {
@@ -27,6 +29,14 @@ const Navbar = () => {
       localStorage.setItem("theme", "light");
     }
   }, [isDark]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 780) setOpenModel(false);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const navigate = useNavigate();
   return (
@@ -54,7 +64,11 @@ const Navbar = () => {
         {}
         <div className="flex gap-4">
           <div className="hidden lg:flex gap-3">
-            <Btn text={"Book a Service"} classes={"btnBook"} />
+            <Btn
+              navigate={() => setOpenModel(true)}
+              text={"Book a Service"}
+              classes={"btnBook"}
+            />
             <Btn
               navigate={() => navigate("/")}
               classes={"btnSign"}
@@ -112,6 +126,14 @@ const Navbar = () => {
           classes={"btnSign"}
           text={"Sign up/Sign in"}
         />
+      </div>
+
+      <div
+        className={`${
+          isopenModel ? "" : "hidden"
+        }   fixed inset-0 m-auto md:w-2/5  w-full sm:w-4/5 p-4 top-0 mt-0 backdrop-blur-sm transition-opacity min-w-screen min-h-screen`}
+      >
+        <HeroForm close={() => setOpenModel(false)} show={true} />
       </div>
     </nav>
   );
