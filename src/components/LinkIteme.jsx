@@ -6,7 +6,9 @@ const LinkIteme = ({ text, to, onClick = undefined }) => {
     <NavLink
       onClick={onClick}
       to={to}
-      className={({ isActive }) => (isActive ? `link bg-bgAccent` : `link`)}
+      className={({ isActive }) =>
+        isActive ? `link bg-bgAccent text-primary` : `link`
+      }
     >
       {text}
     </NavLink>

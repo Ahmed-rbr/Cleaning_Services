@@ -29,7 +29,7 @@
     @apply rounded-2xl relative;
   }
   .link {
-    @apply text-primary font-medium hover:bg-bgAccent dark:text-primaryDark  px-3 py-2 rounded-2xl hover:cursor-pointer transition-all duration-100;
+    @apply text-primary font-medium hover:bg-bgAccent dark:text-primaryDark hover:text-primary  px-4 py-2 rounded text-center hover:cursor-pointer transition-all duration-100;
   }
   .btnBook {
     @apply text-primaryDark font-medium bg-primary dark:bg-bgSecondaryDark  px-3 py-2 rounded hover:text-bgAccent hover:cursor-pointer duration-75 shadow;
@@ -48,6 +48,9 @@
 
   .txt {
     @apply dark:text-primaryDark  text-primary;
+  }
+  img {
+    @apply rounded-2xl;
   }
 }
 /* 

@@ -40,18 +40,18 @@ const Navbar = () => {
 
   const navigate = useNavigate();
   return (
-    <nav className="min-w-screen  m-auto fixed shadow-2xl gap-6 z-50 bg-bgPrimary text-primary dark:bg-bgPrimaryDark dark:text-primaryDark      top-0">
+    <nav className="min-w-screen py-8  m-auto fixed shadow-2xl gap-6 z-50 bg-bgPrimary text-primary dark:bg-bgPrimaryDark dark:text-primaryDark      top-0">
       <div className=" flex items-center justify-between  m-auto w-11/12 ">
         <div className="flex items-center gap-6 ">
           <div>
             <img
-              className="w-24 h-24"
+              className="w-8 h-8"
               onClick={() => navigate("/")}
               src="/imgs/logo.png"
               alt="this is the logo"
             />
           </div>
-          <div className="hidden lg:flex">
+          <div className="hidden gap-4 lg:flex">
             <LinkIteme text={"Home"} to={"/"} />
 
             <LinkIteme text={"About us"} to={"about"} />
