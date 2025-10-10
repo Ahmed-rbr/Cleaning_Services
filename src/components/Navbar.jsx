@@ -4,10 +4,10 @@ import LinkIteme from "./LinkIteme";
 import Btn from "./Btn";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import HeroForm from "./heroForm";
+import HeroForm from "./HeroForm";
 
 const Navbar = () => {
-  const [isopenModel, setOpenModel] = useState(true);
+  const [isopenModel, setOpenModel] = useState(false);
   const [isDark, setIsDark] = useState(false);
   const [isOpen, setOpen] = useState(false);
   useEffect(() => {

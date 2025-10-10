@@ -1,5 +1,5 @@
 import React from "react";
-import HeroForm from "../components/heroForm";
+import HeroForm from "../components/HeroForm";
 import Services from "../components/Services";
 import Features from "../components/Features";
 import WhyUs from "../components/WhyUs";
