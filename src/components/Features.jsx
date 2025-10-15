@@ -15,7 +15,7 @@ const Features = () => {
           The desks are polished and dust-free, the carpets are fresh and
           spotless.
         </p>
-        <ul className="md:grid md:grid-cols-2 gap-4 justify-center items-center flex flex-col">
+        <ul className="md:grid md:grid-cols-2 gap-4 justify-between items-center flex flex-col">
           <li className="flex flex-col items-center">
             <div className="w-12 m-auto h-12 justify-center flex items-center rounded-2xl bg-primary/40  ">
               <FaBroom className="w-6 h-6 " />
@@ -44,7 +44,7 @@ const Features = () => {
             <div className="w-12 m-auto h-12 justify-center flex items-center rounded-2xl bg-primary/40  ">
               <FaTrashAlt className="w-6 h-6 " />
             </div>{" "}
-            <span className="dark:text-primaryDark/90 sm:mb-12  text-primary/90">
+            <span className="dark:text-primaryDark/90   text-primary/90">
               Seasonal cleaning
             </span>
           </li>
