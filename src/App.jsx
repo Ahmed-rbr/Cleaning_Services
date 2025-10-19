@@ -12,12 +12,16 @@ import ContactUs from "./pages/ContactUs";
 import NotFound from "./components/NotFound";
 import ServiceDetails from "./pages/ServiceDetails";
 import ServicesLayout from "./layouts/ServicesLayout";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
 const App = () => {
   const route = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<RouterLoyout />}>
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
+        <Route path="privacy" element={<Privacy />} />
+        <Route path="terms" element={<Terms />} />
         <Route path="service" element={<ServicesLayout />}>
           <Route index element={<Services />} />
           <Route path=":name" element={<ServiceDetails />} />

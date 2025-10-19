@@ -7,6 +7,7 @@ import Feedback from "../components/Feedback";
 import Pricing from "../components/Pricing";
 import ShowCase from "../components/ShowCase";
 import Stats from "../components/Stats";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -88,6 +89,9 @@ const Home = () => {
       </section>
       <section className="py-12 bg-bgPrimary dark:bg-primary dark:text-primaryDark text-primary">
         <Stats />
+      </section>
+      <section className="pt-12 pb-4 bg-bgPrimary dark:bg-primary dark:text-primaryDark text-primary">
+        <Footer />
       </section>
     </article>
   );
