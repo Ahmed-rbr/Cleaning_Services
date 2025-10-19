@@ -13,6 +13,8 @@
   --font-inter: "Inter", sans-serif;
   --animate-scroll: scroll 6s linear infinite;
   --animate-scrollLg: scroll 24s linear infinite;
+  --animate-scrollLgShow: scroll 16s linear infinite;
+  --animate-scrollShow: scroll 8s linear infinite;
 
   @keyframes scroll {
     0% {

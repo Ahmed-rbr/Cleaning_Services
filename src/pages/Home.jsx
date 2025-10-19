@@ -5,6 +5,8 @@ import Features from "../components/Features";
 import WhyUs from "../components/WhyUs";
 import Feedback from "../components/Feedback";
 import Pricing from "../components/Pricing";
+import ShowCase from "../components/ShowCase";
+import Stats from "../components/Stats";
 
 const Home = () => {
   return (
@@ -79,6 +81,13 @@ const Home = () => {
       </section>
       <section className="py-12 bg-[#F8F8F5] dark:bg-[#303C40] dark:text-primaryDark text-primary">
         <Pricing />
+      </section>
+
+      <section className="py-12 bg-bgPrimary dark:bg-primary dark:text-primaryDark text-primary">
+        <ShowCase />
+      </section>
+      <section className="py-12 bg-bgPrimary dark:bg-primary dark:text-primaryDark text-primary">
+        <Stats />
       </section>
     </article>
   );
