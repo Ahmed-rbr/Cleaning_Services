@@ -6,7 +6,7 @@ const RouterLoyout = () => {
   return (
     <div className="m-auto  space-y-24 font-inter">
       <Navbar />
-      <div className=" pt-28">
+      <div className=" pt-26">
         {" "}
         <Outlet />
       </div>

@@ -51,7 +51,7 @@ const Navbar = () => {
               alt="this is the logo"
             />
           </div>
-          <div className="hidden gap-4 lg:flex">
+          <div className="hidden gap-4  lg:flex">
             <LinkIteme text={"Home"} to={"/"} />
 
             <LinkIteme text={"About us"} to={"about"} />
@@ -101,7 +101,7 @@ const Navbar = () => {
           <span className="txt ">Menu</span>
           <FiX onClick={() => setOpen(false)} className="w-8 h-8" />
         </div>
-        <div className="flex flex-col gap-4">
+        <div className="flex mb-4 flex-col gap-4">
           <LinkIteme onClick={() => setOpen(false)} text={"Home"} to={"/"} />
 
           <LinkIteme
