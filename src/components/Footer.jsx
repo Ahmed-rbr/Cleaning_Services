@@ -4,7 +4,7 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 const Footer = () => {
   const navigate = useNavigate();
   return (
-    <footer className="flex bg-[#F4F3EE] flex-col  space-y-12 md:px-8 p-8">
+    <footer className="flex bg-[#F4F3EE] text-bgPrimaryDark dark:bg-bgPrimaryDark dark:text-primaryDark flex-col  space-y-12 md:px-8 p-8">
       <div className="flex md:items-center border-b-1 py-6 border-gray-400 gap-6 flex-col md:flex-row justify-between">
         <div className="flex gap-6 lg:flex-row flex-col">
           <p className="text-sm md:3/5 lg:w-1/5">
@@ -62,7 +62,7 @@ const Footer = () => {
           <p className="text-sm">
             © 2025 CleaningServices - Developed by{" "}
             <a
-              className="text-bgAccent"
+              className="text-blue-400 font-bold underline"
               href={"https://github.com/Ahmed-rbr"}
               target="_blank"
             >
