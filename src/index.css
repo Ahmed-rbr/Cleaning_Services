@@ -56,6 +56,9 @@
   .txt {
     @apply dark:text-primaryDark  text-primary;
   }
+  .bg {
+    @apply dark:bg-primary  bg-primaryDark;
+  }
   img {
     @apply rounded-2xl;
   }
