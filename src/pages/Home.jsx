@@ -1,34 +1,28 @@
-import React from "react";
-import HeroForm from "../components/HeroForm";
-import Services from "../components/Services";
-import Features from "../components/Features";
-import WhyUs from "../components/WhyUs";
-import Feedback from "../components/Feedback";
-import Pricing from "../components/Pricing";
-import ShowCase from "../components/ShowCase";
-import Stats from "../components/Stats";
-import Footer from "../components/Footer";
+import { lazy, Suspense } from "react";
+import { ClipLoader } from "react-spinners";
+
+const HomeHero = lazy(() => import("../components/HomeHero"));
+const Services = lazy(() => import("../components/Services"));
+const Features = lazy(() => import("../components/Features"));
+const WhyUs = lazy(() => import("../components/WhyUs"));
+const Feedback = lazy(() => import("../components/Feedback"));
+const Pricing = lazy(() => import("../components/Pricing"));
+const ShowCase = lazy(() => import("../components/ShowCase"));
+const Stats = lazy(() => import("../components/Stats"));
+const Footer = lazy(() => import("../components/Footer"));
 
 const Home = () => {
+  const Loader = () => (
+    <div className="flex justify-center items-center py-20">
+      <ClipLoader color="#36d7b7" size={40} />
+    </div>
+  );
   return (
     <article className="">
       <section className="">
-        <div className="px-3 md:px-8 py-8 bg-[url('/imgs/ban.jpg')] gap-8  items-center lg:flex-row flex-col bg-cover bg-center min-h-screen w-full flex justify-between   ">
-          <div className="md:w-3/6 flex  lg:self-baseline-last flex-col px-6 gap-4  text-white">
-            <h1 className="rounded-2xl p-2 font-medium text-xl bg-bgAccent text-primary w-max">
-              Gleamer cleaning
-            </h1>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-medium tracking-normal">
-              Trusted Residential Cleaning Services
-            </h2>
-            <p className="tracking-wide font-normal text-base sm:text-lg">
-              Enjoy a pristine home with our expert cleaning services. Book now
-              for a cleaner, fresher living space.
-            </p>
-          </div>
-
-          <HeroForm />
-        </div>
+        <Suspense fallback={<Loader />}>
+          <HomeHero />
+        </Suspense>
         <div className="overflow-hidden py-4 bg-bgAccent">
           <div className="flex animate-scroll md:animate-scrollLg hover:animation-paused whitespace-nowrap">
             <div className="flex">
@@ -68,30 +62,54 @@ const Home = () => {
       </section>
 
       <section className="bg-primaryDark dark:bg-primary dark:text-primaryDark text-primary">
-        <Services />
+        <Suspense fallback={<Loader />}>
+          {" "}
+          <Services />
+        </Suspense>
       </section>
       <section className="py-12 bg-primaryDark dark:bg-primary dark:text-primaryDark text-primary">
-        <Features />
+        <Suspense fallback={<Loader />}>
+          {" "}
+          <Features />
+        </Suspense>
       </section>
       <section className="pb-12 bg-primaryDark dark:bg-primary dark:text-primaryDark text-primary">
-        <WhyUs />
+        <Suspense fallback={<Loader />}>
+          {" "}
+          <WhyUs />
+        </Suspense>
       </section>
 
       <section className="bg-primary  m-auto px-6 py-8">
-        <Feedback />
+        <Suspense fallback={<Loader />}>
+          {" "}
+          <Feedback />
+        </Suspense>
       </section>
       <section className="py-12 bg-[#F8F8F5] dark:bg-[#303C40] dark:text-primaryDark text-primary">
-        <Pricing />
+        <Suspense fallback={<Loader />}>
+          {" "}
+          <Pricing />
+        </Suspense>
       </section>
 
       <section className="py-12 bg-bgPrimary dark:bg-primary dark:text-primaryDark text-primary">
-        <ShowCase />
+        <Suspense fallback={<Loader />}>
+          {" "}
+          <ShowCase />
+        </Suspense>
       </section>
       <section className="py-12 bg-bgPrimary dark:bg-primary dark:text-primaryDark text-primary">
-        <Stats />
+        <Suspense fallback={<Loader />}>
+          {" "}
+          <Stats />
+        </Suspense>
       </section>
       <section className="pt-12 pb-4 bg-bgPrimary dark:bg-primary dark:text-primaryDark text-primary">
-        <Footer />
+        <Suspense fallback={<Loader />}>
+          {" "}
+          <Footer />
+        </Suspense>
       </section>
     </article>
   );

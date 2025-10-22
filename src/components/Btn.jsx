@@ -1,6 +1,10 @@
-const Btn = ({ text, navigate = false, classes }) => {
+const Btn = ({ text, name = "btn", navigate = false, classes }) => {
   return (
-    <button onClick={navigate ? navigate : undefined} className={classes}>
+    <button
+      name={name}
+      onClick={navigate ? navigate : undefined}
+      className={classes}
+    >
       {text}
     </button>
   );

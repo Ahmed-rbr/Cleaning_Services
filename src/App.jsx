@@ -4,30 +4,139 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
-import Home from "./pages/Home";
+import { ClipLoader } from "react-spinners";
+import { lazy, Suspense } from "react";
 import RouterLoyout from "./layouts/RouterLoyout";
-import About from "./pages/About";
-import Services from "./pages/Services";
-import ContactUs from "./pages/ContactUs";
-import NotFound from "./components/NotFound";
-import ServiceDetails from "./pages/ServiceDetails";
 import ServicesLayout from "./layouts/ServicesLayout";
-import Privacy from "./pages/Privacy";
-import Terms from "./pages/Terms";
+
+const Home = lazy(() => import("./pages/Home"));
+const Services = lazy(() => import("./pages/Services"));
+const ContactUs = lazy(() => import("./pages/ContactUs"));
+const NotFound = lazy(() => import("./components/NotFound"));
+const ServiceDetails = lazy(() => import("./pages/ServiceDetails"));
+const About = lazy(() => import("./pages/About"));
+const Privacy = lazy(() => import("./pages/Privacy"));
+const Terms = lazy(() => import("./pages/Terms"));
+
 const App = () => {
   const route = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<RouterLoyout />}>
-        <Route index element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="privacy" element={<Privacy />} />
-        <Route path="terms" element={<Terms />} />
+        <Route
+          index
+          element={
+            <Suspense
+              fallback={
+                <div className="flex justify-center items-center h-screen">
+                  <ClipLoader color="#36d7b7" size={50} />
+                </div>
+              }
+            >
+              <Home />
+            </Suspense>
+          }
+        />
+        <Route
+          path="about"
+          element={
+            <Suspense
+              fallback={
+                <div className="flex justify-center items-center h-screen">
+                  <ClipLoader color="#36d7b7" size={50} />
+                </div>
+              }
+            >
+              <About />
+            </Suspense>
+          }
+        />
+
+        <Route
+          path="privacy"
+          element={
+            <Suspense
+              fallback={
+                <div className="flex justify-center items-center h-screen">
+                  <ClipLoader color="#36d7b7" size={50} />
+                </div>
+              }
+            >
+              <Privacy />
+            </Suspense>
+          }
+        />
+        <Route
+          path="terms"
+          element={
+            <Suspense
+              fallback={
+                <div className="flex justify-center items-center h-screen">
+                  <ClipLoader color="#36d7b7" size={50} />
+                </div>
+              }
+            >
+              <Terms />
+            </Suspense>
+          }
+        />
         <Route path="service" element={<ServicesLayout />}>
-          <Route index element={<Services />} />
-          <Route path=":name" element={<ServiceDetails />} />
+          <Route
+            index
+            element={
+              <Suspense
+                fallback={
+                  <div className="flex justify-center items-center h-screen">
+                    <ClipLoader color="#36d7b7" size={50} />
+                  </div>
+                }
+              >
+                <Services />
+              </Suspense>
+            }
+          />
+          <Route
+            path=":name"
+            element={
+              <Suspense
+                fallback={
+                  <div className="flex justify-center items-center h-screen">
+                    <ClipLoader color="#36d7b7" size={50} />
+                  </div>
+                }
+              >
+                <ServiceDetails />
+              </Suspense>
+            }
+          />
         </Route>
-        <Route path="contact" element={<ContactUs />} />
-        <Route path="*" element={<NotFound />} />
+        <Route
+          path="contact"
+          element={
+            <Suspense
+              fallback={
+                <div className="flex justify-center items-center h-screen">
+                  <ClipLoader color="#36d7b7" size={50} />
+                </div>
+              }
+            >
+              <ContactUs />
+            </Suspense>
+          }
+        />
+        <Route
+          path="*"
+          element={
+            <Suspense
+              fallback={
+                <div className="flex justify-center items-center h-screen">
+                  <ClipLoader color="#36d7b7" size={50} />
+                </div>
+              }
+            >
+              <NotFound />
+            </Suspense>
+          }
+        />
       </Route>
     )
   );

@@ -1,7 +1,13 @@
 import { NavLink } from "react-router-dom";
-import ServiceCard from "./ServiceCard";
-
+import { ClipLoader } from "react-spinners";
+import { lazy, Suspense } from "react";
+const ServiceCard = lazy(() => import("./ServiceCard"));
 const Services = () => {
+  const Loader = () => (
+    <div className="flex justify-center items-center py-20">
+      <ClipLoader color="#36d7b7" size={40} />
+    </div>
+  );
   return (
     <div className="space-y-8  pt-12  ">
       <div className="  flex px-6 items-center flex-col gap-4 md:justify-between lg:flex-row">
@@ -27,7 +33,9 @@ const Services = () => {
         </div>
       </div>
 
-      <ServiceCard />
+      <Suspense fallback={<Loader />}>
+        <ServiceCard />
+      </Suspense>
       <div className="bg-gray-500  h-12"></div>
     </div>
   );

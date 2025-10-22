@@ -1,5 +1,3 @@
-import React from "react";
-
 const Feedback = () => {
   return (
     <div className="flex space-y-12  text-primaryDark  flex-col">
@@ -19,13 +17,13 @@ const Feedback = () => {
       </div>
       <div className="flex md:w-full gap-4 justify-around flex-col  lg:flex-row md:p-8 ">
         <div className="md:w-6/12">
-          <img className="" src="./imgs/cos3.jpg" />
+          <img className="" src="./imgs/cos3.jpg" loading="lazy" alt="img" />
         </div>
 
         <div className="flex lg:w-6/12 gap-4 object-cover col-auto  flex-col ">
           <div className="flex  md:flex-row flex-col  gap-4 items-center">
             {" "}
-            <img className="md:w-6/12" src="./imgs/cos1.jpg" />
+            <img className="md:w-6/12" loading="lazy" src="./imgs/cos1.jpg" />
             <div className="flex gap-3  flex-col">
               <p>
                 I'm consistently impressed by the professionalism and
@@ -37,7 +35,12 @@ const Feedback = () => {
           </div>
           <div className="flex lg:flex-row flex-col gap-4 items-center">
             {" "}
-            <img className="md:w-6/12 " src="./imgs/cos4.jpg" />
+            <img
+              className="md:w-6/12"
+              loading="lazy"
+              alt="img"
+              src="./imgs/cos4.jpg"
+            />
             <div className="flex flex-col gap-3">
               <p>
                 I appreciate the flexibility and reliability of Gleamer's

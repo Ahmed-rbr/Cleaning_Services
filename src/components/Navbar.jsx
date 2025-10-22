@@ -1,4 +1,5 @@
-import { FiSun, FiMoon, FiMenu, FiX } from "react-icons/fi";
+import { FiMenu, FiX } from "react-icons/fi";
+import { FaSun, FaMoon } from "react-icons/fa";
 
 import LinkIteme from "./LinkIteme";
 import Btn from "./Btn";
@@ -45,7 +46,7 @@ const Navbar = () => {
         <div className="flex items-center gap-6 ">
           <div>
             <img
-              className=""
+              className="hover:cursor-pointer"
               onClick={() => navigate("/")}
               src={isDark ? "/imgs/logod.svg" : "/imgs/logoo.svg"}
               alt="this is the logo"
@@ -75,14 +76,11 @@ const Navbar = () => {
               text={"Sign up/Sign in"}
             />
           </div>
-          <button
-            onClick={() => setIsDark(!isDark)}
-            className="p-2 rounded bg-gray-200 dark:bg-gray-700"
-          >
+          <button onClick={() => setIsDark(!isDark)} className="p-2 rounded">
             {isDark ? (
-              <FiSun className="text-yellow-400 w-5 h-5" />
+              <FaSun className="text-yellow-400 bg-blend-darken w-5 h-5" />
             ) : (
-              <FiMoon className="text-gray-800 dark:text-gray-200 w-5 h-5" />
+              <FaMoon className="text-gray-800 dark:text-gray-200 w-5 h-5" />
             )}
           </button>{" "}
           <FiMenu

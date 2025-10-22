@@ -1,5 +1,7 @@
 import { useState } from "react";
-
+import { lazy, Suspense } from "react";
+import { ClipLoader } from "react-spinners";
+const ShowCaseImgs = lazy(() => import("./ShowCaseImgs"));
 const ShowCase = () => {
   const [img, setImg] = useState(null);
   const [show, setShow] = useState(false);
@@ -8,6 +10,12 @@ const ShowCase = () => {
     setShow(true);
     setImg(src);
   };
+
+  const Loader = () => (
+    <div className="flex justify-center items-center py-20">
+      <ClipLoader color="#36d7b7" size={40} />
+    </div>
+  );
   return (
     <div className="space-y-8">
       <div className="flex  m-auto flex-col gap-4 w-4/5 md:w-3/5 text-center items-center">
@@ -22,82 +30,9 @@ const ShowCase = () => {
 
       <div className="overflow-hidden  flex gap-8">
         <div className="flex  items-center md:animate-scrollLgShow  animate-scrollShow">
-          <div className="flex gap-8">
-            <img
-              key={"1"}
-              className="w-64 hover:scale-110 hover:cursor-pointer transition-all duration-200"
-              src="./imgs/clean.jpg"
-              alt=""
-              onClick={() => handleImg("./imgs/clean.jpg")}
-            />
-            <img
-              key={"18"}
-              className="w-64 hover:scale-110 hover:cursor-pointer transition-all duration-200"
-              src="./imgs/clean2.jpg"
-              onClick={() => handleImg("./imgs/clean2.jpg")}
-            />
-            <img
-              key={"1ju"}
-              className="w-64 hover:scale-110 hover:cursor-pointer transition-all duration-200"
-              src="./imgs/cos3.jpg"
-              onClick={() => handleImg("./imgs/cos3.jpg")}
-            />
-            <img
-              key={"1jj"}
-              className="w-64 hover:scale-110 hover:cursor-pointer transition-all duration-200"
-              src="./imgs/cos4.jpg"
-              onClick={() => handleImg("./imgs/cos4.jpg")}
-            />
-            <img
-              key={"1fg"}
-              className="w-64 hover:scale-110 hover:cursor-pointer transition-all duration-200"
-              src="./imgs/herounder2.jpg"
-              onClick={() => handleImg("./imgs/herounder2.jpg")}
-            />
-            <img
-              key={"hghs1"}
-              className="w-64 hover:scale-110 hover:cursor-pointer transition-all duration-200"
-              src="./imgs/heroimg.jpg"
-              onClick={() => handleImg("./imgs/heroimg.jpg")}
-            />
-            <img
-              key={"1ji"}
-              className="w-64 hover:scale-110 hover:cursor-pointer transition-all duration-200"
-              src="./imgs/clean.jpg"
-              alt=""
-              onClick={() => handleImg("./imgs/clean.jpg")}
-            />
-            <img
-              key={"198"}
-              className="w-64 hover:scale-110 hover:cursor-pointer transition-all duration-200"
-              src="./imgs/clean2.jpg"
-              onClick={() => handleImg("./imgs/clean2.jpg")}
-            />
-            <img
-              key={"1jlou"}
-              className="w-64 hover:scale-110 hover:cursor-pointer transition-all duration-200"
-              src="./imgs/cos3.jpg"
-              onClick={() => handleImg("./imgs/cos3.jpg")}
-            />
-            <img
-              key={"1pj"}
-              className="w-64 hover:scale-110 hover:cursor-pointer transition-all duration-200"
-              src="./imgs/cos4.jpg"
-              onClick={() => handleImg("./imgs/cos4.jpg")}
-            />
-            <img
-              key={"1g"}
-              className="w-64 hover:scale-110 hover:cursor-pointer transition-all duration-200"
-              src="./imgs/herounder2.jpg"
-              onClick={() => handleImg("./imgs/herounder2.jpg")}
-            />
-            <img
-              key={"kh1"}
-              className="w-64 hover:scale-110 hover:cursor-pointer transition-all duration-200"
-              src="./imgs/heroimg.jpg"
-              onClick={() => handleImg("./imgs/heroimg.jpg")}
-            />
-          </div>
+          <Suspense fallback={<Loader />}>
+            <ShowCaseImgs handleImg={handleImg} />
+          </Suspense>
         </div>
       </div>
       <div
