@@ -43,7 +43,7 @@
     @apply dark:bg-gray-600 rounded-2xl  flex md:flex-row gap-4 w-11/12 text-center flex-col  justify-between py-6 items-center dark:hover:bg-[#3C4E54] shadow-2xl hover:cursor-pointer px-8 transition-all duration-200 lg:w-4/5 m-auto  bg-bgPrimary   hover:bg-bgAccent;
   }
   .inputHero {
-    @apply w-11/12 py-2  px-4 accent-bgAccent rounded focus:outline-0 border-2 dark:border-white border-primary/10 focus:border-bgAccent shadow placeholder-gray-400;
+    @apply w-11/12 py-2  px-4 accent-bgAccent rounded focus:outline-0 border-1 dark:border-white border-primary/10 focus:border-bgAccent shadow placeholder-gray-400;
   }
   .btn-price {
     @apply dark:bg-primary dark:hover:bg-gray-100 hover:bg-bgPrimaryDark dark:hover:text-bgPrimaryDark transition-all duration-300 hover:text-primaryDark  hover:cursor-pointer px-4 py-2 rounded dark:text-bgPrimary bg-gray-100 font-medium text-bgPrimaryDark;
