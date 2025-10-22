@@ -1,15 +1,16 @@
 import React from "react";
 import Input from "./Input";
 import { FiX } from "react-icons/fi";
+import { ServicesData } from "../assets/ServicesData";
 const HeroForm = ({ show = false, close }) => {
   return (
     <form
-      className="flex  w-full  md:mt-12 shadow-lg   bg-bgPrimary md:w-128 dark:bg-bgPrimaryDark  items-start rounded-2xl  gap-6 m-auto p-4  flex-col "
+      className="flex  w-full  md:mt-12 shadow-lg   bg-bgPrimary md:w-128 dark:bg-bgPrimaryDark  items-start rounded-2xl  gap-4 m-auto p-4  flex-col "
       action="#"
     >
       <div className="flex w-full justify-between items-center">
         {" "}
-        <h1 className="text-4xl font-medium text-primary dark:text-primaryDark">
+        <h1 className="md:text-4xl text-2xl font-medium text-primary dark:text-primaryDark">
           Get a free quote
         </h1>
         <FiX
@@ -38,45 +39,19 @@ const HeroForm = ({ show = false, close }) => {
       <label className="font-medium text-primary dark:text-primaryDark">
         Service options *
       </label>
-      <div className="grid gap-x-8 gap-y-4 grid-cols-1 md:grid-cols-2">
-        <label className="flex items-center gap-2 cursor-pointer">
-          <Input className="checkbox" type={"checkbox"} />
-          <span className="text-sm  text-gray-600 dark:text-gray-400">
-            Regular Cleaning
-          </span>
-        </label>{" "}
-        <label className="flex items-center gap-2 cursor-pointer">
-          <Input className="checkbox" type={"checkbox"} />
-          <span className="text-sm text-gray-600 dark:text-gray-400">
-            Regular Cleaning
-          </span>
-        </label>{" "}
-        <label className="flex items-center gap-2 cursor-pointer">
-          <Input className="checkbox" type={"checkbox"} />
-          <span className="text-sm  text-gray-600 dark:text-gray-400">
-            Regular Cleaning
-          </span>
-        </label>{" "}
-        <label className="flex items-center gap-2 cursor-pointer">
-          <Input className="checkbox" type={"checkbox"} />
-          <span className="text-sm  text-gray-600 dark:text-gray-400">
-            Regular Cleaning
-          </span>
-        </label>{" "}
-        <label className="flex items-center gap-2 cursor-pointer">
-          <Input className="checkbox" type={"checkbox"} />
-          <span className="text-sm  text-gray-600 dark:text-gray-400">
-            Regular Cleaning
-          </span>
-        </label>{" "}
-        <label className="flex items-center gap-2 cursor-pointer">
-          <Input className="checkbox" type={"checkbox"} />
-          <span className="text-sm  text-gray-600 dark:text-gray-400">
-            Regular Cleaning
-          </span>
-        </label>
+      <div className="grid text-xs gap-x-8 gap-y-4 grid-cols-1 md:grid-cols-2">
+        {ServicesData.map((service, id) => (
+          <label key={id} className="flex items-center gap-2 cursor-pointer">
+            <Input className="checkbox" type={"checkbox"} />
+            <span className="text-sm text-gray-600 dark:text-gray-400">
+              {service.title}
+            </span>
+          </label>
+        ))}
       </div>
-      <button className="btnBook">Get Started Today</button>
+      <button onClick={close} className="btnBook">
+        Get Started Today
+      </button>
     </form>
   );
 };

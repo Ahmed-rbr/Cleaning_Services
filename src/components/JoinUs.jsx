@@ -21,7 +21,7 @@ const JoinUs = () => {
           </p>
           <button
             onClick={() => navigate("/contact")}
-            className="bg-primary text-primaryDark py-2 px-4 rounded hover:cursor-pointer  hover:text-[#A8FF39] duration-150 transition-all"
+            className="bg-primary  text-primaryDark dark:bg-primaryDark  dark:text-primary py-2 px-4 rounded hover:cursor-pointer  hover:text-[#A8FF39] shadow dark:hover:text-[#76eb1c] duration-150 transition-all"
           >
             Explore our careers{" "}
           </button>

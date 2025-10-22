@@ -17,7 +17,6 @@ export const ServicesData = [
       "Safe for children, pets, and allergy-prone individuals.",
       "Supports a healthier home and planet.",
       "Ideal for eco-conscious homeowners.",
-      "",
     ],
     process: [
       "Consultation on specific sensitivities and preferences.",
@@ -34,7 +33,7 @@ export const ServicesData = [
       "Essential oil-based sanitizers",
       "Microfiber cloth cleaning",
     ],
-    user_pic: "",
+    user_pic: "./imgs/c.jpg",
     user_title: "Buyer",
     user_name: "Emily & John Smith",
     user_text:
@@ -58,7 +57,6 @@ export const ServicesData = [
       "Safe for children, pets, and allergy-prone individuals.",
       "Supports a healthier home and planet.",
       "Ideal for eco-conscious homeowners.",
-      "",
     ],
     process: [
       "Consultation on specific sensitivities and preferences.",
@@ -75,7 +73,7 @@ export const ServicesData = [
       "Essential oil-based sanitizers",
       "Microfiber cloth cleaning",
     ],
-    user_pic: "",
+    user_pic: "./imgs/c.jpg",
     user_title: "Buyer",
     user_name: "Emily & John Smith",
     user_text:
@@ -100,7 +98,6 @@ export const ServicesData = [
       "Safe for children, pets, and allergy-prone individuals.",
       "Supports a healthier home and planet.",
       "Ideal for eco-conscious homeowners.",
-      "",
     ],
     process: [
       "Consultation on specific sensitivities and preferences.",
@@ -117,7 +114,7 @@ export const ServicesData = [
       "Essential oil-based sanitizers",
       "Microfiber cloth cleaning",
     ],
-    user_pic: "",
+    user_pic: "./imgs/c.jpg",
     user_title: "Buyer",
     user_name: "Emily & John Smith",
     user_text:
@@ -143,7 +140,6 @@ export const ServicesData = [
       "Safe for children, pets, and allergy-prone individuals.",
       "Supports a healthier home and planet.",
       "Ideal for eco-conscious homeowners.",
-      "",
     ],
     process: [
       "Consultation on specific sensitivities and preferences.",
@@ -160,7 +156,7 @@ export const ServicesData = [
       "Essential oil-based sanitizers",
       "Microfiber cloth cleaning",
     ],
-    user_pic: "",
+    user_pic: "./imgs/c.jpg",
     user_title: "Buyer",
     user_name: "Emily & John Smith",
     user_text:
@@ -185,7 +181,6 @@ export const ServicesData = [
       "Safe for children, pets, and allergy-prone individuals.",
       "Supports a healthier home and planet.",
       "Ideal for eco-conscious homeowners.",
-      "",
     ],
     process: [
       "Consultation on specific sensitivities and preferences.",
@@ -202,7 +197,7 @@ export const ServicesData = [
       "Essential oil-based sanitizers",
       "Microfiber cloth cleaning",
     ],
-    user_pic: "",
+    user_pic: "./imgs/c.jpg",
     user_title: "Buyer",
     user_name: "Emily & John Smith",
     user_text:
@@ -227,7 +222,6 @@ export const ServicesData = [
       "Safe for children, pets, and allergy-prone individuals.",
       "Supports a healthier home and planet.",
       "Ideal for eco-conscious homeowners.",
-      "",
     ],
     process: [
       "Consultation on specific sensitivities and preferences.",
@@ -244,7 +238,7 @@ export const ServicesData = [
       "Essential oil-based sanitizers",
       "Microfiber cloth cleaning",
     ],
-    user_pic: "",
+    user_pic: "./imgs/c.jpg",
     user_title: "Buyer",
     user_name: "Emily & John Smith",
     user_text:

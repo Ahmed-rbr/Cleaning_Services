@@ -34,7 +34,7 @@
     @apply text-primary font-medium hover:bg-bgAccent dark:text-primaryDark hover:text-primary  px-4 py-2 rounded text-center hover:cursor-pointer transition-all duration-100;
   }
   .btnBook {
-    @apply text-primaryDark font-medium bg-primary dark:bg-bgSecondaryDark  px-3 py-2 rounded hover:text-bgAccent hover:cursor-pointer duration-75 shadow;
+    @apply text-primaryDark font-medium bg-primary dark:bg-gray-500  px-3 py-2 rounded hover:text-bgAccent hover:cursor-pointer duration-75 shadow;
   }
   .btnSign {
     @apply text-primary font-medium  bg-bgAccent   px-3 py-2 rounded hover:bg-[#A8FF39] hover:cursor-pointer duration-75 shadow;
@@ -43,7 +43,7 @@
     @apply dark:bg-gray-600 rounded-2xl  flex md:flex-row gap-4 w-11/12 text-center flex-col  justify-between py-6 items-center dark:hover:bg-[#3C4E54] shadow-2xl hover:cursor-pointer px-8 transition-all duration-200 lg:w-4/5 m-auto  bg-bgPrimary   hover:bg-bgAccent;
   }
   .inputHero {
-    @apply w-11/12 py-3  px-4 accent-bgAccent rounded focus:outline-0 border-2 dark:border-white border-primary/10 focus:border-bgAccent shadow placeholder-gray-400;
+    @apply w-11/12 py-2  px-4 accent-bgAccent rounded focus:outline-0 border-2 dark:border-white border-primary/10 focus:border-bgAccent shadow placeholder-gray-400;
   }
   .btn-price {
     @apply dark:bg-primary dark:hover:bg-gray-100 hover:bg-bgPrimaryDark dark:hover:text-bgPrimaryDark transition-all duration-300 hover:text-primaryDark  hover:cursor-pointer px-4 py-2 rounded dark:text-bgPrimary bg-gray-100 font-medium text-bgPrimaryDark;

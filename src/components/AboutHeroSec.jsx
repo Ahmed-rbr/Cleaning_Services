@@ -18,7 +18,10 @@ const AboutHeroSec = () => {
           Nam dolor justo, venenatis nec luctus in, ullamcorper ac turpis. Donec
           elementum accumsan placerat. Proin facilisis, diam sit amet.
         </p>
-        <Link className=" border-b-2 border-bgAccent hover:text-[#A8FF39] duration-150 transition-all">
+        <Link
+          to={"/"}
+          className=" border-b-2 border-bgAccent hover:text-[#A8FF39] duration-150 transition-all"
+        >
           Learn more
         </Link>
       </div>

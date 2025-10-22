@@ -15,8 +15,9 @@ const Pricing = () => {
       </div>
 
       <div className="flex flex-col w-full gap-4">
-        {ServicesData.map((ser) => (
+        {ServicesData.map((ser, id) => (
           <PricingCard
+            key={id}
             text={ser.pricingDesc}
             title={ser.title}
             price={ser.priceBefore}

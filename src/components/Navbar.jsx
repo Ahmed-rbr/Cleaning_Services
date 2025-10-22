@@ -45,9 +45,9 @@ const Navbar = () => {
         <div className="flex items-center gap-6 ">
           <div>
             <img
-              className="w-8 h-8"
+              className=""
               onClick={() => navigate("/")}
-              src="/imgs/logo.png"
+              src={isDark ? "/imgs/logod.svg" : "/imgs/logoo.svg"}
               alt="this is the logo"
             />
           </div>
