@@ -1,9 +1,9 @@
 import React from "react";
 
-const Input = ({ type, placeholder = "", className = "" }) => {
+const Input = ({ type, placeholder = "", className = "", required = true }) => {
   return (
     <input
-      required
+      required={required}
       name="name"
       className={className}
       type={type}

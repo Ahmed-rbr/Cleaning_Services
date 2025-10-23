@@ -42,13 +42,14 @@ const HeroForm = ({ show = false, close }) => {
       <div className="grid text-xs gap-x-8 gap-y-4 grid-cols-1 md:grid-cols-2">
         {ServicesData.map((service, id) => (
           <label key={id} className="flex items-center gap-2 cursor-pointer">
-            <Input className="checkbox" type={"checkbox"} />
+            <Input required={false} className="checkbox" type="checkbox" />
             <span className="text-sm text-gray-600 dark:text-gray-400">
               {service.title}
             </span>
           </label>
         ))}
       </div>
+
       <button onClick={close} className="btnBook">
         Get Started Today
       </button>
